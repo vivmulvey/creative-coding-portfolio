@@ -7,7 +7,7 @@ var rootDirectory = path.dirname(__dirname);
 // create a meaningful dirname add "-for-editor" to indicate
 var codePackageCopyName = rootDirectory.split("/").slice(-1).pop() + "-for-editor";
 // create a path to the parent directory of the root
-var copyPathDirectory = path.join(__dirname, '//', codePackageCopyName)
+var copyPathDirectory = path.join(__dirname, '../../', codePackageCopyName)
 
 console.log(rootDirectory)
 console.log(copyPathDirectory)

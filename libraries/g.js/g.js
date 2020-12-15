@@ -21126,7 +21126,7 @@ exports.randomGenerator = randomGenerator;
 
 'use strict';
 
-var Color = require('/objects/color');
+var Color = require('../objects/color');
 
 var vg = {};
 
@@ -21257,26 +21257,26 @@ vg.toSVG = function (o, options) {
 
 module.exports = vg;
 
-},{"/objects/color":32}],30:[function(require,module,exports){
+},{"../objects/color":32}],30:[function(require,module,exports){
 // Object creation / manipulation commands
 
 'use strict';
 
 var flatten = require('lodash.flatten');
 
-var ClipperLib = require('////third_party/clipper');
-var bezier = require('/util/bezier');
-var geo = require('/util/geo');
-var math = require('/util/math');
-var random = require('/util/random');
+var ClipperLib = require('../../../../third_party/clipper');
+var bezier = require('../util/bezier');
+var geo = require('../util/geo');
+var math = require('../util/math');
+var random = require('../util/random');
 
-var Color = require('/objects/color');
-var Group = require('/objects/group');
-var Path = require('/objects/path');
-var Point = require('/objects/point');
-var Rect = require('/objects/rect');
-var Transform = require('/objects/transform');
-var Transformable = require('/objects/transformable');
+var Color = require('../objects/color');
+var Group = require('../objects/group');
+var Path = require('../objects/path');
+var Point = require('../objects/point');
+var Rect = require('../objects/rect');
+var Transform = require('../objects/transform');
+var Transformable = require('../objects/transformable');
 
 function _cloneCommand(cmd) {
     var newCmd = {type: cmd.type};
@@ -22252,17 +22252,17 @@ vg.compound = function (shape1, shape2, method) {
 
 module.exports = vg;
 
-},{"////third_party/clipper":50,"/objects/color":32,"/objects/group":33,"/objects/path":35,"/objects/point":36,"/objects/rect":37,"/objects/transform":39,"/objects/transformable":40,"/util/bezier":42,"/util/geo":44,"/util/math":46,"/util/random":47,"lodash.flatten":3}],31:[function(require,module,exports){
+},{"../../../../third_party/clipper":50,"../objects/color":32,"../objects/group":33,"../objects/path":35,"../objects/point":36,"../objects/rect":37,"../objects/transform":39,"../objects/transformable":40,"../util/bezier":42,"../util/geo":44,"../util/math":46,"../util/random":47,"lodash.flatten":3}],31:[function(require,module,exports){
 // Basic shapes
 
 'use strict';
 
-var geo = require('/util/geo');
+var geo = require('../util/geo');
 
-var Color = require('/objects/color');
-var Path = require('/objects/path');
-var Point = require('/objects/point');
-var gText = require('/objects/text');
+var Color = require('../objects/color');
+var Path = require('../objects/path');
+var Point = require('../objects/point');
+var gText = require('../objects/text');
 
 var vg = {};
 
@@ -22580,14 +22580,14 @@ vg.demoEllipse = function () {
 
 module.exports = vg;
 
-},{"/objects/color":32,"/objects/path":35,"/objects/point":36,"/objects/text":38,"/util/geo":44}],32:[function(require,module,exports){
+},{"../objects/color":32,"../objects/path":35,"../objects/point":36,"../objects/text":38,"../util/geo":44}],32:[function(require,module,exports){
 // Color object
 
 'use strict';
 
-var math = require('/util/math');
-var color = require('/util/color');
-var js = require('/util/js');
+var math = require('../util/math');
+var color = require('../util/color');
+var js = require('../util/js');
 
 // var RGB = 'RGB';
 var HSB = 'HSB';
@@ -22907,14 +22907,14 @@ Color.hsl = function (hue, saturation, lightness, alpha, range) {
 
 module.exports = Color;
 
-},{"/util/color":43,"/util/js":45,"/util/math":46}],33:[function(require,module,exports){
+},{"../util/color":43,"../util/js":45,"../util/math":46}],33:[function(require,module,exports){
 // Shape group object
 
 'use strict';
 
-var Path = require('/objects/path');
-var Rect = require('/objects/rect');
-var Color = require('/objects/color');
+var Path = require('../objects/path');
+var Rect = require('../objects/rect');
+var Color = require('../objects/color');
 
 var Group = function (shapes) {
     if (!shapes) {
@@ -23056,12 +23056,12 @@ Group.prototype.draw = function (ctx) {
 
 module.exports = Group;
 
-},{"/objects/color":32,"/objects/path":35,"/objects/rect":37}],34:[function(require,module,exports){
+},{"../objects/color":32,"../objects/path":35,"../objects/rect":37}],34:[function(require,module,exports){
 // 3-dimensional matrix
 
 'use strict';
 
-var Vec3 = require('/objects/vec3');
+var Vec3 = require('../objects/vec3');
 
 // Construct a 4x4 matrix.
 var Matrix4 = function (m) {
@@ -23240,19 +23240,19 @@ Matrix4.prototype.translate = function (tx, ty, tz) {
 };
 
 module.exports = Matrix4;
-},{"/objects/vec3":41}],35:[function(require,module,exports){
+},{"../objects/vec3":41}],35:[function(require,module,exports){
 // Bézier path object
 
 'use strict';
 
 var flatten = require('lodash.flatten');
 
-var bezier = require('/util/bezier');
-var geo = require('/util/geo');
-var math = require('/util/math');
+var bezier = require('../util/bezier');
+var geo = require('../util/geo');
+var math = require('../util/math');
 
-var Color = require('/objects/color');
-var Rect = require('/objects/rect');
+var Color = require('../objects/color');
+var Rect = require('../objects/rect');
 
 var MOVETO  = bezier.MOVETO;
 var LINETO  = bezier.LINETO;
@@ -23823,7 +23823,7 @@ Path.combine = function () {
 
 module.exports = Path;
 
-},{"/objects/color":32,"/objects/rect":37,"/util/bezier":42,"/util/geo":44,"/util/math":46,"lodash.flatten":3}],36:[function(require,module,exports){
+},{"../objects/color":32,"../objects/rect":37,"../util/bezier":42,"../util/geo":44,"../util/math":46,"lodash.flatten":3}],36:[function(require,module,exports){
 // 2-dimensional point object.
 
 'use strict';
@@ -23931,7 +23931,7 @@ module.exports = Point;
 
 'use strict';
 
-var Point = require('/objects/point');
+var Point = require('../objects/point');
 
 var Rect = function (x, y, width, height) {
     this.x = x !== undefined ? x : 0;
@@ -24023,7 +24023,7 @@ Rect.prototype.centerPoint = function () {
 };
 
 module.exports = Rect;
-},{"/objects/point":36}],38:[function(require,module,exports){
+},{"../objects/point":36}],38:[function(require,module,exports){
 // Text object
 
 // Internally the object is called "GText" to avoid conflicts with the DOM Text object.
@@ -24031,9 +24031,9 @@ module.exports = Rect;
 
 'use strict';
 
-var Color = require('/objects/color');
-var Rect = require('/objects/rect');
-var Transform = require('/objects/transform');
+var Color = require('../objects/color');
+var Rect = require('../objects/rect');
+var Transform = require('../objects/transform');
 
 var _dummyContext = null;
 
@@ -24207,17 +24207,17 @@ GText.prototype.toSVG = function () {
 };
 
 module.exports = GText;
-},{"/objects/color":32,"/objects/rect":37,"/objects/transform":39}],39:[function(require,module,exports){
+},{"../objects/color":32,"../objects/rect":37,"../objects/transform":39}],39:[function(require,module,exports){
 // 2-dimensional transformation matrix
 
 'use strict';
 
-var bezier = require('/util/bezier');
-var math = require('/util/math');
+var bezier = require('../util/bezier');
+var math = require('../util/math');
 
-var Group = require('/objects/group');
-var Path = require('/objects/path');
-var Point = require('/objects/point');
+var Group = require('../objects/group');
+var Path = require('../objects/path');
+var Point = require('../objects/point');
 
 var MOVETO  = bezier.MOVETO;
 var LINETO  = bezier.LINETO;
@@ -24414,13 +24414,13 @@ Transform.prototype.transformShape = function (shape) {
 
 module.exports = Transform;
 
-},{"/objects/group":33,"/objects/path":35,"/objects/point":36,"/util/bezier":42,"/util/math":46}],40:[function(require,module,exports){
+},{"../objects/group":33,"../objects/path":35,"../objects/point":36,"../util/bezier":42,"../util/math":46}],40:[function(require,module,exports){
 // Mixin for Path and Group
 
 'use strict';
 
-var Point = require('/objects/point');
-var Transform = require('/objects/transform');
+var Point = require('../objects/point');
+var Transform = require('../objects/transform');
 
 var Transformable = {
     translate: function (position) {
@@ -24467,7 +24467,7 @@ var Transformable = {
 
 module.exports = Transformable;
 
-},{"/objects/point":36,"/objects/transform":39}],41:[function(require,module,exports){
+},{"../objects/point":36,"../objects/transform":39}],41:[function(require,module,exports){
 //// VECTORS AND MATRICES ///////////////////////////////////////////////
 
 'use strict';
@@ -24560,10 +24560,10 @@ module.exports = Vec3;
 
 'use strict';
 
-var math = require('/util/math');
+var math = require('../util/math');
 
-var Point = require('/objects/point');
-var Rect = require('/objects/rect');
+var Point = require('../objects/point');
+var Rect = require('../objects/rect');
 
 var bezier = {};
 
@@ -24840,7 +24840,7 @@ bezier.extrema = function (x1, y1, x2, y2, x3, y3, x4, y4) {
 
 module.exports = bezier;
 
-},{"/objects/point":36,"/objects/rect":37,"/util/math":46}],43:[function(require,module,exports){
+},{"../objects/point":36,"../objects/rect":37,"../util/math":46}],43:[function(require,module,exports){
 // Color conversion functions
 
 'use strict';
@@ -25169,9 +25169,9 @@ module.exports = color;
 
 'use strict';
 
-var math = require('/util/math');
+var math = require('../util/math');
 
-var Point = require('/objects/point');
+var Point = require('../objects/point');
 
 var geo = {};
 
@@ -25224,7 +25224,7 @@ geo.pointInPolygon = function (points, x, y) {
 
 module.exports = geo;
 
-},{"/objects/point":36,"/util/math":46}],45:[function(require,module,exports){
+},{"../objects/point":36,"../util/math":46}],45:[function(require,module,exports){
 // Generic JavaScript utility methods
 
 'use strict';
@@ -25444,11 +25444,11 @@ exports.generator = generator;
 
 var xmldom = require('xmldom');
 
-var Color = require('/objects/color');
-var Group = require('/objects/group');
-var Path = require('/objects/path');
-var Point = require('/objects/point');
-var Transform = require('/objects/transform');
+var Color = require('../objects/color');
+var Group = require('../objects/group');
+var Path = require('../objects/path');
+var Point = require('../objects/point');
+var Transform = require('../objects/transform');
 
 // var getReflection = function (a, b, relative) {
 //     var theta,
@@ -26190,7 +26190,7 @@ exports.parseString = function (s) {
     }
 };
 
-},{"/objects/color":32,"/objects/group":33,"/objects/path":35,"/objects/point":36,"/objects/transform":39,"xmldom":10}],49:[function(require,module,exports){
+},{"../objects/color":32,"../objects/group":33,"../objects/path":35,"../objects/point":36,"../objects/transform":39,"xmldom":10}],49:[function(require,module,exports){
 // vg.js
 // JavaScript library for vector graphics
 // https://github.com/nodebox/vg.js

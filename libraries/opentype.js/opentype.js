@@ -3839,11 +3839,11 @@ exports.recordList = recordList;
 
 'use strict';
 
-var encoding = require('/encoding');
-var glyphset = require('/glyphset');
-var parse = require('/parse');
-var path = require('/path');
-var table = require('/table');
+var encoding = require('../encoding');
+var glyphset = require('../glyphset');
+var parse = require('../parse');
+var path = require('../path');
+var table = require('../table');
 
 // Custom equals function that can also check lists.
 function equals(a, b) {
@@ -4945,15 +4945,15 @@ function makeCFFTable(glyphs, options) {
 exports.parse = parseCFFTable;
 exports.make = makeCFFTable;
 
-},{"/encoding":5,"/glyphset":8,"/parse":11,"/path":12,"/table":14}],16:[function(require,module,exports){
+},{"../encoding":5,"../glyphset":8,"../parse":11,"../path":12,"../table":14}],16:[function(require,module,exports){
 // The `cmap` table stores the mappings from characters to glyphs.
 // https://www.microsoft.com/typography/OTSPEC/cmap.htm
 
 'use strict';
 
-var check = require('/check');
-var parse = require('/parse');
-var table = require('/table');
+var check = require('../check');
+var parse = require('../parse');
+var table = require('../table');
 
 function parseCmapTableFormat12(cmap, p) {
     var i;
@@ -5169,15 +5169,15 @@ function makeCmapTable(glyphs) {
 exports.parse = parseCmapTable;
 exports.make = makeCmapTable;
 
-},{"/check":3,"/parse":11,"/table":14}],17:[function(require,module,exports){
+},{"../check":3,"../parse":11,"../table":14}],17:[function(require,module,exports){
 // The `fvar` table stores font variation axes and instances.
 // https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6fvar.html
 
 'use strict';
 
-var check = require('/check');
-var parse = require('/parse');
-var table = require('/table');
+var check = require('../check');
+var parse = require('../parse');
+var table = require('../table');
 
 function addName(name, names) {
     var nameString = JSON.stringify(name);
@@ -5310,16 +5310,16 @@ function parseFvarTable(data, start, names) {
 exports.make = makeFvarTable;
 exports.parse = parseFvarTable;
 
-},{"/check":3,"/parse":11,"/table":14}],18:[function(require,module,exports){
+},{"../check":3,"../parse":11,"../table":14}],18:[function(require,module,exports){
 // The `glyf` table describes the glyphs in TrueType outline format.
 // http://www.microsoft.com/typography/otspec/glyf.htm
 
 'use strict';
 
-var check = require('/check');
-var glyphset = require('/glyphset');
-var parse = require('/parse');
-var path = require('/path');
+var check = require('../check');
+var glyphset = require('../glyphset');
+var parse = require('../parse');
+var path = require('../path');
 
 // Parse the coordinate data for a glyph.
 function parseGlyphCoordinate(p, flag, previousValue, shortVectorBitMask, sameBitMask) {
@@ -5647,14 +5647,14 @@ function parseGlyfTable(data, start, loca, font) {
 
 exports.parse = parseGlyfTable;
 
-},{"/check":3,"/glyphset":8,"/parse":11,"/path":12}],19:[function(require,module,exports){
+},{"../check":3,"../glyphset":8,"../parse":11,"../path":12}],19:[function(require,module,exports){
 // The `GPOS` table contains kerning pairs, among other things.
 // https://www.microsoft.com/typography/OTSPEC/gpos.htm
 
 'use strict';
 
-var check = require('/check');
-var parse = require('/parse');
+var check = require('../check');
+var parse = require('../parse');
 
 // Parse ScriptList and FeatureList tables of GPOS, GSUB, GDEF, BASE, JSTF tables.
 // These lists are unused by now, this function is just the basis for a real parsing.
@@ -5886,16 +5886,16 @@ function parseGposTable(data, start, font) {
 
 exports.parse = parseGposTable;
 
-},{"/check":3,"/parse":11}],20:[function(require,module,exports){
+},{"../check":3,"../parse":11}],20:[function(require,module,exports){
 // The `GSUB` table contains ligatures, among other things.
 // https://www.microsoft.com/typography/OTSPEC/gsub.htm
 
 'use strict';
 
-var check = require('/check');
-var Parser = require('/parse').Parser;
+var check = require('../check');
+var Parser = require('../parse').Parser;
 var subtableParsers = new Array(9);         // subtableParsers[0] is unused
-var table = require('/table');
+var table = require('../table');
 
 // https://www.microsoft.com/typography/OTSPEC/GSUB.htm#SS
 subtableParsers[1] = function parseLookup1() {
@@ -6146,15 +6146,15 @@ function makeGsubTable(gsub) {
 exports.parse = parseGsubTable;
 exports.make = makeGsubTable;
 
-},{"/check":3,"/parse":11,"/table":14}],21:[function(require,module,exports){
+},{"../check":3,"../parse":11,"../table":14}],21:[function(require,module,exports){
 // The `head` table contains global information about the font.
 // https://www.microsoft.com/typography/OTSPEC/head.htm
 
 'use strict';
 
-var check = require('/check');
-var parse = require('/parse');
-var table = require('/table');
+var check = require('../check');
+var parse = require('../parse');
+var table = require('../table');
 
 // Parse the header `head` table
 function parseHeadTable(data, start) {
@@ -6214,14 +6214,14 @@ function makeHeadTable(options) {
 exports.parse = parseHeadTable;
 exports.make = makeHeadTable;
 
-},{"/check":3,"/parse":11,"/table":14}],22:[function(require,module,exports){
+},{"../check":3,"../parse":11,"../table":14}],22:[function(require,module,exports){
 // The `hhea` table contains information for horizontal layout.
 // https://www.microsoft.com/typography/OTSPEC/hhea.htm
 
 'use strict';
 
-var parse = require('/parse');
-var table = require('/table');
+var parse = require('../parse');
+var table = require('../table');
 
 // Parse the horizontal header `hhea` table
 function parseHheaTable(data, start) {
@@ -6269,14 +6269,14 @@ function makeHheaTable(options) {
 exports.parse = parseHheaTable;
 exports.make = makeHheaTable;
 
-},{"/parse":11,"/table":14}],23:[function(require,module,exports){
+},{"../parse":11,"../table":14}],23:[function(require,module,exports){
 // The `hmtx` table contains the horizontal metrics for all glyphs.
 // https://www.microsoft.com/typography/OTSPEC/hmtx.htm
 
 'use strict';
 
-var parse = require('/parse');
-var table = require('/table');
+var parse = require('../parse');
+var table = require('../table');
 
 // Parse the `hmtx` table, which contains the horizontal metrics for all glyphs.
 // This function augments the glyph array, adding the advanceWidth and leftSideBearing to each glyph.
@@ -6313,15 +6313,15 @@ function makeHmtxTable(glyphs) {
 exports.parse = parseHmtxTable;
 exports.make = makeHmtxTable;
 
-},{"/parse":11,"/table":14}],24:[function(require,module,exports){
+},{"../parse":11,"../table":14}],24:[function(require,module,exports){
 // The `kern` table contains kerning pairs.
 // Note that some fonts use the GPOS OpenType layout table to specify kerning.
 // https://www.microsoft.com/typography/OTSPEC/kern.htm
 
 'use strict';
 
-var check = require('/check');
-var parse = require('/parse');
+var check = require('../check');
+var parse = require('../parse');
 
 function parseWindowsKernTable(p) {
     var pairs = {};
@@ -6386,13 +6386,13 @@ function parseKernTable(data, start) {
 
 exports.parse = parseKernTable;
 
-},{"/check":3,"/parse":11}],25:[function(require,module,exports){
+},{"../check":3,"../parse":11}],25:[function(require,module,exports){
 // The `loca` table stores the offsets to the locations of the glyphs in the font.
 // https://www.microsoft.com/typography/OTSPEC/loca.htm
 
 'use strict';
 
-var parse = require('/parse');
+var parse = require('../parse');
 
 // Parse the `loca` table. This table stores the offsets to the locations of the glyphs in the font,
 // relative to the beginning of the glyphData table.
@@ -6421,7 +6421,7 @@ function parseLocaTable(data, start, numGlyphs, shortVersion) {
 
 exports.parse = parseLocaTable;
 
-},{"/parse":11}],26:[function(require,module,exports){
+},{"../parse":11}],26:[function(require,module,exports){
 // The `ltag` table stores IETF BCP-47 language tags. It allows supporting
 // languages for which TrueType does not assign a numeric code.
 // https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6ltag.html
@@ -6430,9 +6430,9 @@ exports.parse = parseLocaTable;
 
 'use strict';
 
-var check = require('/check');
-var parse = require('/parse');
-var table = require('/table');
+var check = require('../check');
+var parse = require('../parse');
+var table = require('../table');
 
 function makeLtagTable(tags) {
     var result = new table.Table('ltag', [
@@ -6484,15 +6484,15 @@ function parseLtagTable(data, start) {
 exports.make = makeLtagTable;
 exports.parse = parseLtagTable;
 
-},{"/check":3,"/parse":11,"/table":14}],27:[function(require,module,exports){
+},{"../check":3,"../parse":11,"../table":14}],27:[function(require,module,exports){
 // The `maxp` table establishes the memory requirements for the font.
 // We need it just to get the number of glyphs in the font.
 // https://www.microsoft.com/typography/OTSPEC/maxp.htm
 
 'use strict';
 
-var parse = require('/parse');
-var table = require('/table');
+var parse = require('../parse');
+var table = require('../table');
 
 // Parse the maximum profile `maxp` table.
 function parseMaxpTable(data, start) {
@@ -6529,17 +6529,17 @@ function makeMaxpTable(numGlyphs) {
 exports.parse = parseMaxpTable;
 exports.make = makeMaxpTable;
 
-},{"/parse":11,"/table":14}],28:[function(require,module,exports){
+},{"../parse":11,"../table":14}],28:[function(require,module,exports){
 // The `GPOS` table contains kerning pairs, among other things.
 // https://www.microsoft.com/typography/OTSPEC/gpos.htm
 
 'use strict';
 
-var types = require('/types');
+var types = require('../types');
 var decode = types.decode;
-var check = require('/check');
-var parse = require('/parse');
-var table = require('/table');
+var check = require('../check');
+var parse = require('../parse');
+var table = require('../table');
 
 // Parse the metadata `meta` table.
 // https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6meta.html
@@ -6592,17 +6592,17 @@ function makeMetaTable(tags) {
 exports.parse = parseMetaTable;
 exports.make = makeMetaTable;
 
-},{"/check":3,"/parse":11,"/table":14,"/types":33}],29:[function(require,module,exports){
+},{"../check":3,"../parse":11,"../table":14,"../types":33}],29:[function(require,module,exports){
 // The `name` naming table.
 // https://www.microsoft.com/typography/OTSPEC/name.htm
 
 'use strict';
 
-var types = require('/types');
+var types = require('../types');
 var decode = types.decode;
 var encode = types.encode;
-var parse = require('/parse');
-var table = require('/table');
+var parse = require('../parse');
+var table = require('../table');
 
 // NameIDs for the name table.
 var nameTableNames = [
@@ -7429,14 +7429,14 @@ function makeNameTable(names, ltag) {
 exports.parse = parseNameTable;
 exports.make = makeNameTable;
 
-},{"/parse":11,"/table":14,"/types":33}],30:[function(require,module,exports){
+},{"../parse":11,"../table":14,"../types":33}],30:[function(require,module,exports){
 // The `OS/2` table contains metrics required in OpenType fonts.
 // https://www.microsoft.com/typography/OTSPEC/os2.htm
 
 'use strict';
 
-var parse = require('/parse');
-var table = require('/table');
+var parse = require('../parse');
+var table = require('../table');
 
 var unicodeRanges = [
     {begin: 0x0000, end: 0x007F}, // Basic Latin
@@ -7685,15 +7685,15 @@ exports.getUnicodeRange = getUnicodeRange;
 exports.parse = parseOS2Table;
 exports.make = makeOS2Table;
 
-},{"/parse":11,"/table":14}],31:[function(require,module,exports){
+},{"../parse":11,"../table":14}],31:[function(require,module,exports){
 // The `post` table stores additional PostScript information, such as glyph names.
 // https://www.microsoft.com/typography/OTSPEC/post.htm
 
 'use strict';
 
-var encoding = require('/encoding');
-var parse = require('/parse');
-var table = require('/table');
+var encoding = require('../encoding');
+var parse = require('../parse');
+var table = require('../table');
 
 // Parse the PostScript `post` table
 function parsePostTable(data, start) {
@@ -7758,7 +7758,7 @@ function makePostTable() {
 exports.parse = parsePostTable;
 exports.make = makePostTable;
 
-},{"/encoding":5,"/parse":11,"/table":14}],32:[function(require,module,exports){
+},{"../encoding":5,"../parse":11,"../table":14}],32:[function(require,module,exports){
 // The `sfnt` wrapper provides organization for the tables in the font.
 // It is the top-level data structure in a font.
 // https://www.microsoft.com/typography/OTSPEC/otff.htm
@@ -7767,8 +7767,8 @@ exports.make = makePostTable;
 
 'use strict';
 
-var check = require('/check');
-var table = require('/table');
+var check = require('../check');
+var table = require('../table');
 
 var cmap = require('./cmap');
 var cff = require('./cff');
@@ -8102,7 +8102,7 @@ exports.computeCheckSum = computeCheckSum;
 exports.make = makeSfntTable;
 exports.fontToTable = fontToSfntTable;
 
-},{"/check":3,"/table":14,"./cff":15,"./cmap":16,"./gsub":20,"./head":21,"./hhea":22,"./hmtx":23,"./ltag":26,"./maxp":27,"./meta":28,"./name":29,"./os2":30,"./post":31}],33:[function(require,module,exports){
+},{"../check":3,"../table":14,"./cff":15,"./cmap":16,"./gsub":20,"./head":21,"./hhea":22,"./hmtx":23,"./ltag":26,"./maxp":27,"./meta":28,"./name":29,"./os2":30,"./post":31}],33:[function(require,module,exports){
 // Data types used in the OpenType font file.
 // All OpenType fonts use Motorola-style byte ordering (Big Endian)
 

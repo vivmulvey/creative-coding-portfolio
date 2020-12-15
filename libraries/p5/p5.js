@@ -43705,7 +43705,7 @@ module.exports = p5;
  * interchangeably.
  */
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 p5.ColorConversion = {};
 
 /**
@@ -43962,7 +43962,7 @@ p5.ColorConversion._rgbaToHSLA = function(rgba) {
 
 module.exports = p5.ColorConversion;
 
-},{"/core/main":25}],16:[function(_dereq_,module,exports){
+},{"../core/main":25}],16:[function(_dereq_,module,exports){
 /**
  * @module Color
  * @submodule Creating & Reading
@@ -43973,10 +43973,10 @@ module.exports = p5.ColorConversion;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
-var constants = _dereq_('/core/constants');
+var p5 = _dereq_('../core/main');
+var constants = _dereq_('../core/constants');
 _dereq_('./p5.Color');
-_dereq_('/core/error_helpers');
+_dereq_('../core/error_helpers');
 
 /**
  * Extracts the alpha value from a color or pixel array.
@@ -44554,7 +44554,7 @@ p5.prototype.saturation = function(c) {
 
 module.exports = p5;
 
-},{"/core/constants":19,"/core/error_helpers":21,"/core/main":25,"./p5.Color":17}],17:[function(_dereq_,module,exports){
+},{"../core/constants":19,"../core/error_helpers":21,"../core/main":25,"./p5.Color":17}],17:[function(_dereq_,module,exports){
 /**
  * @module Color
  * @submodule Creating & Reading
@@ -44566,8 +44566,8 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
-var constants = _dereq_('/core/constants');
+var p5 = _dereq_('../core/main');
+var constants = _dereq_('../core/constants');
 var color_conversion = _dereq_('./color_conversion');
 
 /**
@@ -45572,7 +45572,7 @@ p5.Color._parseInputs = function(r, g, b, a) {
 
 module.exports = p5.Color;
 
-},{"/core/constants":19,"/core/main":25,"./color_conversion":15}],18:[function(_dereq_,module,exports){
+},{"../core/constants":19,"../core/main":25,"./color_conversion":15}],18:[function(_dereq_,module,exports){
 /**
  * @module Color
  * @submodule Setting
@@ -45583,8 +45583,8 @@ module.exports = p5.Color;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
-var constants = _dereq_('/core/constants');
+var p5 = _dereq_('../core/main');
+var constants = _dereq_('../core/constants');
 _dereq_('./p5.Color');
 
 /**
@@ -46328,7 +46328,7 @@ p5.prototype.stroke = function() {
 
 module.exports = p5;
 
-},{"/core/constants":19,"/core/main":25,"./p5.Color":17}],19:[function(_dereq_,module,exports){
+},{"../core/constants":19,"../core/main":25,"./p5.Color":17}],19:[function(_dereq_,module,exports){
 /**
  * @module Constants
  * @submodule Constants
@@ -47602,7 +47602,7 @@ if (typeof IS_MINIFIED !== 'undefined') {
 } else {
   var doFriendlyWelcome = false; // TEMP until we get it all working LM
   // for parameter validation
-  var dataDoc = _dereq_('//docs/reference/data.json');
+  var dataDoc = _dereq_('../../docs/reference/data.json');
   var arrDoc = JSON.parse(JSON.stringify(dataDoc));
 
   // -- Borrowed from jQuery 1.11.3 --
@@ -48362,7 +48362,7 @@ if (document.readyState !== 'complete') {
 
 module.exports = p5;
 
-},{"//docs/reference/data.json":1,"./constants":19,"./main":25}],22:[function(_dereq_,module,exports){
+},{"../../docs/reference/data.json":1,"./constants":19,"./main":25}],22:[function(_dereq_,module,exports){
 /**
  * @requires constants
  */
@@ -48388,7 +48388,7 @@ module.exports = {
 },{"./constants":19}],23:[function(_dereq_,module,exports){
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 /**
  * _globalInit
@@ -48427,7 +48427,7 @@ if (document.readyState === 'complete') {
   window.addEventListener('load', _globalInit, false);
 }
 
-},{"/core/main":25}],24:[function(_dereq_,module,exports){
+},{"../core/main":25}],24:[function(_dereq_,module,exports){
 /**
  * @for p5
  * @requires core
@@ -50423,7 +50423,7 @@ module.exports = p5.Graphics;
 'use strict';
 
 var p5 = _dereq_('./main');
-var constants = _dereq_('/core/constants');
+var constants = _dereq_('../core/constants');
 
 /**
  * Main graphics and rendering context, as well as the base API
@@ -50787,12 +50787,12 @@ function calculateOffset(object) {
 
 module.exports = p5.Renderer;
 
-},{"/core/constants":19,"./main":25}],29:[function(_dereq_,module,exports){
+},{"../core/constants":19,"./main":25}],29:[function(_dereq_,module,exports){
 'use strict';
 
 var p5 = _dereq_('./main');
 var constants = _dereq_('./constants');
-var filters = _dereq_('/image/filters');
+var filters = _dereq_('../image/filters');
 
 _dereq_('./p5.Renderer');
 
@@ -52086,7 +52086,7 @@ p5.Renderer2D.prototype.pop = function(style) {
 
 module.exports = p5.Renderer2D;
 
-},{"/image/filters":43,"./constants":19,"./main":25,"./p5.Renderer":28}],30:[function(_dereq_,module,exports){
+},{"../image/filters":43,"./constants":19,"./main":25,"./p5.Renderer":28}],30:[function(_dereq_,module,exports){
 /**
  * @module Rendering
  * @submodule Rendering
@@ -52099,7 +52099,7 @@ var p5 = _dereq_('./main');
 var constants = _dereq_('./constants');
 _dereq_('./p5.Graphics');
 _dereq_('./p5.Renderer2D');
-_dereq_('/webgl/p5.RendererGL');
+_dereq_('../webgl/p5.RendererGL');
 var defaultId = 'defaultCanvas0'; // this gets set again in createCanvas
 var defaultClass = 'p5Canvas';
 
@@ -52414,7 +52414,7 @@ p5.prototype.blendMode = function(mode) {
 
 module.exports = p5;
 
-},{"/webgl/p5.RendererGL":75,"./constants":19,"./main":25,"./p5.Graphics":27,"./p5.Renderer2D":29}],31:[function(_dereq_,module,exports){
+},{"../webgl/p5.RendererGL":75,"./constants":19,"./main":25,"./p5.Graphics":27,"./p5.Renderer2D":29}],31:[function(_dereq_,module,exports){
 /**
  * @module Shape
  * @submodule 2D Primitives
@@ -52425,10 +52425,10 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/main');
-var constants = _dereq_('/constants');
-var canvas = _dereq_('/helpers');
-_dereq_('/error_helpers');
+var p5 = _dereq_('../main');
+var constants = _dereq_('../constants');
+var canvas = _dereq_('../helpers');
+_dereq_('../error_helpers');
 
 /**
  * Draw an arc to the screen. If called with only x, y, w, h, start, and
@@ -52886,7 +52886,7 @@ p5.prototype.triangle = function() {
 
 module.exports = p5;
 
-},{"/constants":19,"/error_helpers":21,"/helpers":22,"/main":25}],32:[function(_dereq_,module,exports){
+},{"../constants":19,"../error_helpers":21,"../helpers":22,"../main":25}],32:[function(_dereq_,module,exports){
 /**
  * @module Shape
  * @submodule Attributes
@@ -52897,8 +52897,8 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/main');
-var constants = _dereq_('/constants');
+var p5 = _dereq_('../main');
+var constants = _dereq_('../constants');
 
 /**
  * Modifies the location from which ellipses are drawn by changing the way
@@ -53234,7 +53234,7 @@ p5.prototype.strokeWeight = function(w) {
 
 module.exports = p5;
 
-},{"/constants":19,"/main":25}],33:[function(_dereq_,module,exports){
+},{"../constants":19,"../main":25}],33:[function(_dereq_,module,exports){
 /**
  * @module Shape
  * @submodule Curves
@@ -53244,8 +53244,8 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/main');
-_dereq_('/error_helpers');
+var p5 = _dereq_('../main');
+_dereq_('../error_helpers');
 
 /**
  * Draws a cubic Bezier curve on the screen. These curves are defined by a
@@ -53784,7 +53784,7 @@ p5.prototype.curveTangent = function(a, b, c, d, t) {
 
 module.exports = p5;
 
-},{"/error_helpers":21,"/main":25}],34:[function(_dereq_,module,exports){
+},{"../error_helpers":21,"../main":25}],34:[function(_dereq_,module,exports){
 /**
  * @module Shape
  * @submodule Vertex
@@ -53795,8 +53795,8 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/main');
-var constants = _dereq_('/constants');
+var p5 = _dereq_('../main');
+var constants = _dereq_('../constants');
 var shapeKind = null;
 var vertices = [];
 var contourVertices = [];
@@ -54711,7 +54711,7 @@ p5.prototype.vertex = function(x, y, moveTo, u, v) {
 
 module.exports = p5;
 
-},{"/constants":19,"/main":25}],35:[function(_dereq_,module,exports){
+},{"../constants":19,"../main":25}],35:[function(_dereq_,module,exports){
 'use strict';
 
 // requestAnim shim layer by Paul Irish
@@ -55683,7 +55683,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 /**
  *
@@ -56345,7 +56345,7 @@ p5.NumberDict.prototype.maxKey = function() {
 
 module.exports = p5.TypedDict;
 
-},{"/core/main":25}],39:[function(_dereq_,module,exports){
+},{"../core/main":25}],39:[function(_dereq_,module,exports){
 /**
  * @module Events
  * @submodule Acceleration
@@ -56355,7 +56355,7 @@ module.exports = p5.TypedDict;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 /**
  * The system variable deviceOrientation always contains the orientation of
@@ -57024,7 +57024,7 @@ p5.prototype._handleMotion = function() {
 
 module.exports = p5;
 
-},{"/core/main":25}],40:[function(_dereq_,module,exports){
+},{"../core/main":25}],40:[function(_dereq_,module,exports){
 /**
  * @module Events
  * @submodule Keyboard
@@ -57034,7 +57034,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 /**
  * Holds the key codes of currently pressed keys.
@@ -57431,7 +57431,7 @@ function areDownKeys() {
 
 module.exports = p5;
 
-},{"/core/main":25}],41:[function(_dereq_,module,exports){
+},{"../core/main":25}],41:[function(_dereq_,module,exports){
 /**
  * @module Events
  * @submodule Mouse
@@ -57442,8 +57442,8 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
-var constants = _dereq_('/core/constants');
+var p5 = _dereq_('../core/main');
+var constants = _dereq_('../core/constants');
 
 /*
  * This is a flag which is false until the first time
@@ -58290,7 +58290,7 @@ p5.prototype._onwheel = function(e) {
 
 module.exports = p5;
 
-},{"/core/constants":19,"/core/main":25}],42:[function(_dereq_,module,exports){
+},{"../core/constants":19,"../core/main":25}],42:[function(_dereq_,module,exports){
 /**
  * @module Events
  * @submodule Touch
@@ -58300,7 +58300,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 /**
  * The system variable touches[] contains an array of the positions of all
@@ -58556,7 +58556,7 @@ p5.prototype._ontouchend = function(e) {
 
 module.exports = p5;
 
-},{"/core/main":25}],43:[function(_dereq_,module,exports){
+},{"../core/main":25}],43:[function(_dereq_,module,exports){
 /*global ImageData:false */
 
 /**
@@ -59180,7 +59180,7 @@ module.exports = Filters;
  */
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 // This is not global, but ESLint is not aware that
 // this module is implicitly enclosed with Browserify: this overrides the
 // redefined-global error and permits using the name "frames" for the array
@@ -59474,7 +59474,7 @@ p5.prototype._makeFrame = function(filename, extension, _cnv) {
 
 module.exports = p5;
 
-},{"/core/main":25}],45:[function(_dereq_,module,exports){
+},{"../core/main":25}],45:[function(_dereq_,module,exports){
 /**
  * @module Image
  * @submodule Loading & Displaying
@@ -59484,12 +59484,12 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 var Filters = _dereq_('./filters');
-var canvas = _dereq_('/core/helpers');
-var constants = _dereq_('/core/constants');
+var canvas = _dereq_('../core/helpers');
+var constants = _dereq_('../core/constants');
 
-_dereq_('/core/error_helpers');
+_dereq_('../core/error_helpers');
 
 /**
  * Loads an image from a path and creates a <a href="#/p5.Image">p5.Image</a> from it.
@@ -60014,7 +60014,7 @@ p5.prototype.imageMode = function(m) {
 
 module.exports = p5;
 
-},{"/core/constants":19,"/core/error_helpers":21,"/core/helpers":22,"/core/main":25,"./filters":43}],46:[function(_dereq_,module,exports){
+},{"../core/constants":19,"../core/error_helpers":21,"../core/helpers":22,"../core/main":25,"./filters":43}],46:[function(_dereq_,module,exports){
 /**
  * @module Image
  * @submodule Image
@@ -60030,7 +60030,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 var Filters = _dereq_('./filters');
 
 /*
@@ -60836,7 +60836,7 @@ p5.Image.prototype.save = function(filename, extension) {
 
 module.exports = p5.Image;
 
-},{"/core/main":25,"./filters":43}],47:[function(_dereq_,module,exports){
+},{"../core/main":25,"./filters":43}],47:[function(_dereq_,module,exports){
 /**
  * @module Image
  * @submodule Pixels
@@ -60846,9 +60846,9 @@ module.exports = p5.Image;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 var Filters = _dereq_('./filters');
-_dereq_('/color/p5.Color');
+_dereq_('../color/p5.Color');
 
 /**
  * <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
@@ -61491,7 +61491,7 @@ p5.prototype.updatePixels = function(x, y, w, h) {
 
 module.exports = p5;
 
-},{"/color/p5.Color":17,"/core/main":25,"./filters":43}],48:[function(_dereq_,module,exports){
+},{"../color/p5.Color":17,"../core/main":25,"./filters":43}],48:[function(_dereq_,module,exports){
 /**
  * @module IO
  * @submodule Input
@@ -61504,11 +61504,11 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 _dereq_('whatwg-fetch');
 _dereq_('es6-promise').polyfill();
 var fetchJsonp = _dereq_('fetch-jsonp');
-_dereq_('/core/error_helpers');
+_dereq_('../core/error_helpers');
 
 /**
  * Loads a JSON file from a file or a URL, and returns an Object.
@@ -63388,7 +63388,7 @@ function destroyClickedElement(event) {
 
 module.exports = p5;
 
-},{"/core/error_helpers":21,"/core/main":25,"es6-promise":5,"fetch-jsonp":6,"file-saver":7,"whatwg-fetch":13}],49:[function(_dereq_,module,exports){
+},{"../core/error_helpers":21,"../core/main":25,"es6-promise":5,"fetch-jsonp":6,"file-saver":7,"whatwg-fetch":13}],49:[function(_dereq_,module,exports){
 /**
  * @module IO
  * @submodule Table
@@ -63397,7 +63397,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 /**
  *  Table Options
@@ -64732,7 +64732,7 @@ p5.Table.prototype.getArray = function() {
 
 module.exports = p5;
 
-},{"/core/main":25}],50:[function(_dereq_,module,exports){
+},{"../core/main":25}],50:[function(_dereq_,module,exports){
 /**
  * @module IO
  * @submodule Table
@@ -64741,7 +64741,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 /**
  *  A TableRow object represents a single row of data values,
@@ -65084,7 +65084,7 @@ p5.TableRow.prototype.getString = function(column) {
 
 module.exports = p5;
 
-},{"/core/main":25}],51:[function(_dereq_,module,exports){
+},{"../core/main":25}],51:[function(_dereq_,module,exports){
 /**
  * @module IO
  * @submodule XML
@@ -65093,7 +65093,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 /**
  * XML is a representation of an XML object, able to parse XML code. Use
@@ -65922,7 +65922,7 @@ p5.XML.prototype._setAttributes = function(node) {
 
 module.exports = p5;
 
-},{"/core/main":25}],52:[function(_dereq_,module,exports){
+},{"../core/main":25}],52:[function(_dereq_,module,exports){
 /**
  * @module Math
  * @submodule Calculation
@@ -65932,7 +65932,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 /**
  * Calculates the absolute value (magnitude) of a number. Maps to Math.abs().
@@ -66759,7 +66759,7 @@ function hypot(x, y, z) {
 
 module.exports = p5;
 
-},{"/core/main":25}],53:[function(_dereq_,module,exports){
+},{"../core/main":25}],53:[function(_dereq_,module,exports){
 /**
  * @module Math
  * @submodule Math
@@ -66769,7 +66769,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 /**
  * Creates a new <a href="#/p5.Vector">p5.Vector</a> (the datatype for storing vectors). This provides a
@@ -66811,7 +66811,7 @@ p5.prototype.createVector = function(x, y, z) {
 
 module.exports = p5;
 
-},{"/core/main":25}],54:[function(_dereq_,module,exports){
+},{"../core/main":25}],54:[function(_dereq_,module,exports){
 //////////////////////////////////////////////////////////////
 
 // http://mrl.nyu.edu/~perlin/noise/
@@ -66834,7 +66834,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 var PERLIN_YWRAPB = 4;
 var PERLIN_YWRAP = 1 << PERLIN_YWRAPB;
@@ -67134,7 +67134,7 @@ p5.prototype.noiseSeed = function(seed) {
 
 module.exports = p5;
 
-},{"/core/main":25}],55:[function(_dereq_,module,exports){
+},{"../core/main":25}],55:[function(_dereq_,module,exports){
 /**
  * @module Math
  * @submodule Math
@@ -67143,8 +67143,8 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
-var constants = _dereq_('/core/constants');
+var p5 = _dereq_('../core/main');
+var constants = _dereq_('../core/constants');
 
 /**
  * A class to describe a two or three dimensional vector, specifically
@@ -68888,7 +68888,7 @@ p5.Vector.mag = function mag(vecT) {
 
 module.exports = p5.Vector;
 
-},{"/core/constants":19,"/core/main":25}],56:[function(_dereq_,module,exports){
+},{"../core/constants":19,"../core/main":25}],56:[function(_dereq_,module,exports){
 /**
  * @module Math
  * @submodule Random
@@ -68898,7 +68898,7 @@ module.exports = p5.Vector;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 var seeded = false;
 var previous = false;
@@ -69134,7 +69134,7 @@ p5.prototype.randomGaussian = function(mean, sd) {
 
 module.exports = p5;
 
-},{"/core/main":25}],57:[function(_dereq_,module,exports){
+},{"../core/main":25}],57:[function(_dereq_,module,exports){
 /**
  * @module Math
  * @submodule Trigonometry
@@ -69145,8 +69145,8 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
-var constants = _dereq_('/core/constants');
+var p5 = _dereq_('../core/main');
+var constants = _dereq_('../core/constants');
 
 /*
  * all DEGREES/RADIANS conversion should be done in the p5 instance
@@ -69513,7 +69513,7 @@ p5.prototype._fromRadians = function(angle) {
 
 module.exports = p5;
 
-},{"/core/constants":19,"/core/main":25}],58:[function(_dereq_,module,exports){
+},{"../core/constants":19,"../core/main":25}],58:[function(_dereq_,module,exports){
 /**
  * @module Typography
  * @submodule Attributes
@@ -69524,7 +69524,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 /**
  * Sets the current alignment for drawing text. Accepts two
@@ -69804,7 +69804,7 @@ p5.prototype._updateTextMetrics = function() {
 
 module.exports = p5;
 
-},{"/core/main":25}],59:[function(_dereq_,module,exports){
+},{"../core/main":25}],59:[function(_dereq_,module,exports){
 /**
  * @module Typography
  * @submodule Loading & Displaying
@@ -69814,11 +69814,11 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
-var constants = _dereq_('/core/constants');
+var p5 = _dereq_('../core/main');
+var constants = _dereq_('../core/constants');
 var opentype = _dereq_('opentype.js');
 
-_dereq_('/core/error_helpers');
+_dereq_('../core/error_helpers');
 
 /**
  * Loads an opentype font file (.otf, .ttf) from a file or a URL,
@@ -70112,7 +70112,7 @@ p5.prototype.textFont = function(theFont, theSize) {
 
 module.exports = p5;
 
-},{"/core/constants":19,"/core/error_helpers":21,"/core/main":25,"opentype.js":11}],60:[function(_dereq_,module,exports){
+},{"../core/constants":19,"../core/error_helpers":21,"../core/main":25,"opentype.js":11}],60:[function(_dereq_,module,exports){
 /**
  * This module defines the <a href="#/p5.Font">p5.Font</a> class and functions for
  * drawing text to the display canvas.
@@ -70124,8 +70124,8 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
-var constants = _dereq_('/core/constants');
+var p5 = _dereq_('../core/main');
+var constants = _dereq_('../core/constants');
 
 /*
  * TODO:
@@ -71358,7 +71358,7 @@ function cacheKey() {
 
 module.exports = p5;
 
-},{"/core/constants":19,"/core/main":25}],61:[function(_dereq_,module,exports){
+},{"../core/constants":19,"../core/main":25}],61:[function(_dereq_,module,exports){
 /**
  * @module Data
  * @submodule Array Functions
@@ -71368,7 +71368,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 /**
  * Adds a value to the end of an array. Extends the length of
@@ -71713,7 +71713,7 @@ p5.prototype.subset = function(list, start, count) {
 
 module.exports = p5;
 
-},{"/core/main":25}],62:[function(_dereq_,module,exports){
+},{"../core/main":25}],62:[function(_dereq_,module,exports){
 /**
  * @module Data
  * @submodule Conversion
@@ -71723,7 +71723,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 /**
  * Converts a string to its floating point representation. The contents of a
@@ -72030,7 +72030,7 @@ p5.prototype.unhex = function(n) {
 
 module.exports = p5;
 
-},{"/core/main":25}],63:[function(_dereq_,module,exports){
+},{"../core/main":25}],63:[function(_dereq_,module,exports){
 /**
  * @module Data
  * @submodule String Functions
@@ -72040,8 +72040,8 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
-_dereq_('/core/error_helpers');
+var p5 = _dereq_('../core/main');
+_dereq_('../core/error_helpers');
 
 //return p5; //LM is this a mistake?
 
@@ -72592,7 +72592,7 @@ p5.prototype.trim = function(str) {
 
 module.exports = p5;
 
-},{"/core/error_helpers":21,"/core/main":25}],64:[function(_dereq_,module,exports){
+},{"../core/error_helpers":21,"../core/main":25}],64:[function(_dereq_,module,exports){
 /**
  * @module IO
  * @submodule Time & Date
@@ -72602,7 +72602,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 /**
  * p5.js communicates with the clock on your computer. The <a href="#/p5/day">day()</a> function
@@ -72761,7 +72761,7 @@ p5.prototype.year = function() {
 
 module.exports = p5;
 
-},{"/core/main":25}],65:[function(_dereq_,module,exports){
+},{"../core/main":25}],65:[function(_dereq_,module,exports){
 /**
  * @module Shape
  * @submodule 3D Primitives
@@ -72772,9 +72772,9 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 _dereq_('./p5.Geometry');
-var constants = _dereq_('/core/constants');
+var constants = _dereq_('../core/constants');
 
 /**
  * Draw a plane with given a width and height
@@ -74312,7 +74312,7 @@ p5.RendererGL.prototype.curveVertex = function() {
 
 module.exports = p5;
 
-},{"/core/constants":19,"/core/main":25,"./p5.Geometry":71}],66:[function(_dereq_,module,exports){
+},{"../core/constants":19,"../core/main":25,"./p5.Geometry":71}],66:[function(_dereq_,module,exports){
 /**
  * @module Lights, Camera
  * @submodule Interaction
@@ -74322,8 +74322,8 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
-var constants = _dereq_('/core/constants');
+var p5 = _dereq_('../core/main');
+var constants = _dereq_('../core/constants');
 
 /**
  * Allows movement around a 3D sketch using a mouse or trackpad.  Left-clicking
@@ -74883,7 +74883,7 @@ p5.prototype._axesIcon = function(size, xOff, yOff, zOff) {
 
 module.exports = p5;
 
-},{"/core/constants":19,"/core/main":25}],67:[function(_dereq_,module,exports){
+},{"../core/constants":19,"../core/main":25}],67:[function(_dereq_,module,exports){
 /**
  * @module Lights, Camera
  * @submodule Lights
@@ -74893,7 +74893,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 /**
  * Creates an ambient light with a color
@@ -75210,7 +75210,7 @@ p5.prototype.pointLight = function(v1, v2, v3, x, y, z) {
 
 module.exports = p5;
 
-},{"/core/main":25}],68:[function(_dereq_,module,exports){
+},{"../core/main":25}],68:[function(_dereq_,module,exports){
 /**
  * @module Shape
  * @submodule 3D Models
@@ -75221,7 +75221,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 _dereq_('./p5.Geometry');
 
 /**
@@ -75501,7 +75501,7 @@ p5.prototype.model = function(model) {
 
 module.exports = p5;
 
-},{"/core/main":25,"./p5.Geometry":71}],69:[function(_dereq_,module,exports){
+},{"../core/main":25,"./p5.Geometry":71}],69:[function(_dereq_,module,exports){
 /**
  * @module Lights, Camera
  * @submodule Material
@@ -75511,8 +75511,8 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
-var constants = _dereq_('/core/constants');
+var p5 = _dereq_('../core/main');
+var constants = _dereq_('../core/constants');
 _dereq_('./p5.Texture');
 
 /**
@@ -75925,7 +75925,7 @@ p5.RendererGL.prototype._applyColorBlend = function(colors) {
 
 module.exports = p5;
 
-},{"/core/constants":19,"/core/main":25,"./p5.Texture":77}],70:[function(_dereq_,module,exports){
+},{"../core/constants":19,"../core/main":25,"./p5.Texture":77}],70:[function(_dereq_,module,exports){
 /**
  * @module Lights, Camera
  * @submodule Camera
@@ -75934,7 +75934,7 @@ module.exports = p5;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 ////////////////////////////////////////////////////////////////////////////////
 // p5.Prototype Methods
@@ -77111,12 +77111,12 @@ p5.prototype.setCamera = function(cam) {
 
 module.exports = p5.Camera;
 
-},{"/core/main":25}],71:[function(_dereq_,module,exports){
+},{"../core/main":25}],71:[function(_dereq_,module,exports){
 //some of the functions are adjusted from Three.js(http://threejs.org)
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 /**
  * p5 Geometry class
  * @class p5.Geometry
@@ -77391,7 +77391,7 @@ p5.Geometry.prototype.normalize = function() {
 
 module.exports = p5.Geometry;
 
-},{"/core/main":25}],72:[function(_dereq_,module,exports){
+},{"../core/main":25}],72:[function(_dereq_,module,exports){
 /**
  * @requires constants
  * @todo see methods below needing further implementation.
@@ -77403,7 +77403,7 @@ module.exports = p5.Geometry;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 var GLMAT_ARRAY_TYPE = Array;
 var isMatrixArray = function(x) {
@@ -78112,7 +78112,7 @@ p5.Matrix.prototype.ortho = function(left, right, bottom, top, near, far) {
 
 module.exports = p5.Matrix;
 
-},{"/core/main":25}],73:[function(_dereq_,module,exports){
+},{"../core/main":25}],73:[function(_dereq_,module,exports){
 /**
  * Welcome to RendererGL Immediate Mode.
  * Immediate mode is used for drawing custom shapes
@@ -78128,8 +78128,8 @@ module.exports = p5.Matrix;
  */
 'use strict';
 
-var p5 = _dereq_('/core/main');
-var constants = _dereq_('/core/constants');
+var p5 = _dereq_('../core/main');
+var constants = _dereq_('../core/constants');
 
 /**
  * Begin shape drawing.  This is a helpful way of generating
@@ -78494,12 +78494,12 @@ p5.RendererGL.prototype._drawStrokeImmediateMode = function() {
 
 module.exports = p5.RendererGL;
 
-},{"/core/constants":19,"/core/main":25}],74:[function(_dereq_,module,exports){
+},{"../core/constants":19,"../core/main":25}],74:[function(_dereq_,module,exports){
 //Retained Mode. The default mode for rendering 3D primitives
 //in WEBGL.
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 var hashCount = 0;
 /**
@@ -78857,15 +78857,15 @@ p5.RendererGL.prototype._drawPoints = function(vertices, vertexBuffer) {
 
 module.exports = p5.RendererGL;
 
-},{"/core/main":25}],75:[function(_dereq_,module,exports){
+},{"../core/main":25}],75:[function(_dereq_,module,exports){
 'use strict';
 
-var p5 = _dereq_('/core/main');
-var constants = _dereq_('/core/constants');
+var p5 = _dereq_('../core/main');
+var constants = _dereq_('../core/constants');
 var libtess = _dereq_('libtess');
 _dereq_('./p5.Shader');
 _dereq_('./p5.Camera');
-_dereq_('/core/p5.Renderer');
+_dereq_('../core/p5.Renderer');
 _dereq_('./p5.Matrix');
 
 
@@ -80031,7 +80031,7 @@ p5.RendererGL.prototype._bezierToCatmull = function(w) {
 
 module.exports = p5.RendererGL;
 
-},{"/core/constants":19,"/core/main":25,"/core/p5.Renderer":28,"./p5.Camera":70,"./p5.Matrix":72,"./p5.Shader":76,"libtess":10}],76:[function(_dereq_,module,exports){
+},{"../core/constants":19,"../core/main":25,"../core/p5.Renderer":28,"./p5.Camera":70,"./p5.Matrix":72,"./p5.Shader":76,"libtess":10}],76:[function(_dereq_,module,exports){
 /**
  * This module defines the p5.Shader class
  * @module Lights, Camera
@@ -80042,7 +80042,7 @@ module.exports = p5.RendererGL;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
+var p5 = _dereq_('../core/main');
 
 /**
  * Shader class for WEBGL Mode
@@ -80482,7 +80482,7 @@ p5.Shader.prototype.enableAttrib = function(
 
 module.exports = p5.Shader;
 
-},{"/core/main":25}],77:[function(_dereq_,module,exports){
+},{"../core/main":25}],77:[function(_dereq_,module,exports){
 /**
  * This module defines the p5.Texture class
  * @module Lights, Camera
@@ -80493,8 +80493,8 @@ module.exports = p5.Shader;
 
 'use strict';
 
-var p5 = _dereq_('/core/main');
-var constants = _dereq_('/core/constants');
+var p5 = _dereq_('../core/main');
+var constants = _dereq_('../core/constants');
 
 /**
  * Texture class for WEBGL Mode
@@ -80834,11 +80834,11 @@ p5.Texture.prototype.setWrapMode = function(wrapX, wrapY) {
 
 module.exports = p5.Texture;
 
-},{"/core/constants":19,"/core/main":25}],78:[function(_dereq_,module,exports){
+},{"../core/constants":19,"../core/main":25}],78:[function(_dereq_,module,exports){
 'use strict';
 
-var p5 = _dereq_('/core/main');
-var constants = _dereq_('/core/constants');
+var p5 = _dereq_('../core/main');
+var constants = _dereq_('../core/constants');
 _dereq_('./p5.Shader');
 _dereq_('./p5.RendererGL');
 
@@ -81574,5 +81574,5 @@ p5.RendererGL.prototype._renderText = function(p, line, x, y, maxY) {
   return p;
 };
 
-},{"/core/constants":19,"/core/main":25,"./p5.RendererGL":75,"./p5.Shader":76}]},{},[14])(14)
+},{"../core/constants":19,"../core/main":25,"./p5.RendererGL":75,"./p5.Shader":76}]},{},[14])(14)
 });
