@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Creative Coding Portfolio </title>
+  <meta charset="utf-8">
+
+<link rel="shortcut icon" type="image/jpg" href="https://avatars.githubusercontent.com/u/53230530?v=4" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+
+  <style>
+      a {
+        color: #add8e6;
+      }
+  .btn-primary {
+    background-color: #add8e6;
+    border-color:#add8e6;
+    color: #000
+  }
+
+  .btn-primary:hover {
+    background-color: #add8e6;
+    border-color: #00000000;
+}
+
+  body {
+    background-color: #000;
+  }
+  .card-title {
+    color: #fff;
+  }
+  
+  .card-text {
+    color: #ffffffa8;
+  }
+  
+  .jumbotron {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      color: #000;
+      background-color: #add8e6;
+  }
+  @media screen and (min-width: 768px) {
+  .jumbotron {
+      padding-top: 80px;
+      padding-bottom: 80px;
+  }
+      }
+
+  .jumbotron .h1, .jumbotron h1 {
+      color: inherit;
+  }
+
+  @media screen and (min-width: 768px) {
+  .jumbotron .h1, .jumbotron h1 {
+      font-size: 63px;
+  }
+}
+
+
+  </style>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script> -->
+  </head>
+
+<script>
+const objects = [
+{
+  name: "Phase 1",
+  desc: "Experimenting with the use of grids.",
+  path: "WrappingPaper/Ex11_Grid",
+  imgSrc: "images/Grid.png"
+},
+{
+  name: "Phase 2",
+  desc: "Experimenting with random classes and grids.",
+  path: "WrappingPaper/Ex11_RandomClasses",
+  imgSrc: "images/RandomPattern.png"
+},
+{
+  name: "Phase 3",
+  desc: "Intro to halftone pattern.",
+  path: "WrappingPaper/Ex11_Halftones",
+  imgSrc: "images/Halftones.png"
+},
+{
+  name: "Phase 4",
+  desc: "Using halftone patterns on top of eachother.",
+  path: "WrappingPaper/Ex11_HalftonesB",
+  imgSrc: "images/Halftones1.png"
+},
+{
+  name: "Phase 5",
+  desc: "Using mirrored halftone patterns.",
+  path: "WrappingPaper/Ex11_HalftonesC",
+  imgSrc: "images/Halftones2.png"
+},
+{
+  name: "Phase 6",
+  desc: "Using halftone patterns and a grid system.",
+  path: "WrappingPaper/Ex11_HalftonesD",
+  imgSrc: "images/Halftones3.png"
+},
+{
+  name: "Phase 7",
+  desc: "Experimenting with the canvas rotation.",
+  path: "WrappingPaper/Ex11_Grid_Pattern",
+  imgSrc: "images/GridPattern.png"
+},
+{
+  name: "Phase 8",
+  desc: "Use of lerping colour and halftones",
+  path: "WrappingPaper/Ex11_Grid_Pattern",
+  imgSrc: "images/HalftoneGrid.png"
+},
+{
+  name: "Final Blue",
+  desc: "Final Version 1.0 : Use of a grid , halftones , lerping colour , canvas rotation and random classes",
+  path: "WrappingPaper/Ex11_FinalDesignBigVersionBlue",
+  imgSrc: "images/WallpaperBlue.png"
+},
+{
+  name: "Final Red",
+  desc: "Final Version 2.0",
+  path: "WrappingPaper/Ex11_FinalDesignBigVersionRed",
+  imgSrc: "images/WallpaperRed.png"
+},
+{
+  name: "Final Gold",
+  desc: "Final Version 3.0",
+  path: "WrappingPaper/Ex11_FinalDesignBigVersionGold",
+  imgSrc: "images/WallpaperGold.png"
+},
+{
+  name: "Final Green",
+  desc: "Final Version 4.0",
+  path: "WrappingPaper/Ex11_FinalDesignBigVersionGreen",
+  imgSrc: "images/WallpaperGreen.png"
+},
+
+]
+
+document.addEventListener("DOMContentLoaded", function(event) {
+
+  const wrapper = document.getElementById("wrapper")
+  const row = document.createElement("div")
+
+  row.className = "row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-3"
+  
+  objects.forEach(obj => {
+    const div = document.createElement("div")
+    const card = document.createElement("div")
+    const cardBodyDiv = document.createElement("div")
+    const title = document.createElement("h3")
+    const desc = document.createElement("p")
+    const img = document.createElement("img")
+    const a = document.createElement("a")
+
+    title.innerHTML = obj.name
+    desc.innerHTML = obj.desc
+    a.innerHTML = "View Sketch"
+    a.href = obj.path + '/index.html'
+    a.setAttribute('target', '_blank');
+    img.src = obj.imgSrc
+
+
+    div.className = 'col'
+    card.className = 'card bg-dark'
+    img.className = 'card-img-top img-thumbnail '
+    cardBodyDiv.className = 'card-body dark'
+    title.className = 'card-title dark'
+    desc.className = 'card-text dark'
+    a.className = 'btn btn-primary'
+
+    card.appendChild(img)
+    
+    cardBodyDiv.appendChild(title)
+    cardBodyDiv.appendChild(desc)
+    cardBodyDiv.appendChild(a)
+
+    card.appendChild(cardBodyDiv)
+    div.appendChild(card)
+
+    row.appendChild(div)
+
+  })
+
+  wrapper.appendChild(row)
+
+})
+
+</script>
+
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="index.html">Class Work</a>
+          <a class="nav-link active" aria-current="page" href="/">CA1</a>
+          <a class="nav-link" href="CA2.html">CA2</a>
+          
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>CA 1 - Wrapping Paper</h1>
+    <h4>CA2</h4>
+
+  </div>
+</div>
+<div class="container container-fluid bg-3 py-5" id="wrapper">
+
+</div>
+<br />
+<br />
+<br />
+<br />
+<br /> 
+
+<footer class="container-fluid text-center">
+</footer>
+
+</body>
+</html>

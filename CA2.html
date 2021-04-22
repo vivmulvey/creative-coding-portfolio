@@ -71,155 +71,39 @@
 <script>
 const objects = [
 {
-  name: "Exercise 1",
-  desc: "Using hue , saturation and boldness (HSB) for colorMode and grid use.",
+  name: "Stage 1",
+  desc: "Experimenting with amplitude.",
   path: "Ex1",
-  imgSrc: "images/Ex1.png"
+  imgSrc: "images/Stage1.png"
 },
 {
-  name: "Exercise 2",
-  desc: "Colour Blocks",
+  name: "Stage 2",
+  desc: "Experimenting with volume and volume history.",
   path: "Ex2_ColourBlock",
-  imgSrc: "images/Ex2.png"
+  imgSrc: "images/Stage2.png"
 },
+
 {
-  name: "Exercise 3",
-  desc: "Intro to vertex points , cos and sin to create a triangle fan.",
-  path: "Ex3_ColourWheel",
-  imgSrc: "images/Ex3.png"
-},
-{
-  name: "Exercise 4",
-  desc: "Intro to rotate and translate.",
+  name: "Stage 4",
+  desc: "Experimenting with volume , cos and sin.",
   path: "Ex4_Translations",
-  imgSrc: "images/Ex4.png"
+  imgSrc: "images/Stage3.png"
 },
 {
-  name: "Exercise 5",
-  desc: "Project work using rotate and translate.",
+  name: "Stage 5",
+  desc: "Experimenting with cues.",
   path: "Ex5_Project",
-  imgSrc: "images/Ex5.png"
-},
-{
-  name: "Exercise 5.1",
-  desc: "Project work using key pressed() , arrays to store colours and a grid.",
-  path: "Ex5_Project_2ndAttempt",
-  imgSrc: "images/Ex5.1.png"
+  imgSrc: "images/Stage4.png"
 },
 {
   name: "Exercise 6",
-  desc: "Intro to lerping colour.",
-  path: "Ex6_LerpingColour",
-  imgSrc: "images/Ex6.png"
+  desc: "Creating agents that interact with one another based on their nearest neighbour (no movement).",
+  path: "Ex5_Project_2ndAttempt",
+  imgSrc: "images/Stage5.png"
 },
-{
-  name: "Exercise 7",
-  desc: "Triangle fan using rotate , translate and lerping colour.",
-  path: "Ex7_LerpingColourWheel",
-  imgSrc: "images/Ex7.png"
-},
-{
-  name: "Exercise 8",
-  desc: "Triangle fan with mouse interaction.",
-  path: "Ex8_InteractiveCircle",
-  imgSrc: "images/Ex8.png"
-},
-{
-  name: "Exercise 9",
-  desc: "Rotation of objects using mouse interaction.",
-  path: "Ex9_Rotation",
-  imgSrc: "images/Ex9.png"
-},
-{
-  name: "Exercise 9.1",
-  desc: "Rotation of objects using mouse interaction and scaling.",
-  path: "Ex_Rotation2",
-  imgSrc: "images/Ex9.1.png"
-},
-{
-  name: "Exercise 10",
-  desc: "Intro to random seed.",
-  path: "Ex10_LinePattern",
-  imgSrc: "images/Ex10.png"
-},
-{
-  name: "Exercise 10.2",
-  desc: "Using random seed with vertex shapes and lerping colour.",
-  path: "Ex10_LinerPatternV3",
-  imgSrc: "images/Ex10.1.png"
-},
-{
-  name: "Exercise 10.2",
-  desc: "Using random seed with vertex shapes, lerping colour and shading.",
-  path: "Ex10_LinerPatternV3",
-  imgSrc: "images/Ex10.2.png"
-},
-{
-  name: "Agents V1",
-  desc: "Intro to agents.",
-  path: "Ex10_LinerPatternV3",
-  imgSrc: "images/Agent.png"
-},
-{
-  name: "Agents V2",
-  desc: "Random Walker using agents.",
-  path: "Ex10_LinerPatternV3",
-  imgSrc: "images/Agent2.png"
-},
-{
-  name: "Agents V2",
-  desc: "Angles and keyPressed(1,2,3) to manipulate the agent's pattern.",
-  path: "Ex10_LinerPatternV3",
-  imgSrc: "images/Agent3.png"
-},
-{
-  name: "Agents V3",
-  desc: "Using createVector() to position agents.",
-  path: "Ex10_LinerPatternV3",
-  imgSrc: "images/Agent4.png"
-},
-{
-  name: "Agents V4",
-  desc: "Intro to movement using control points (curveVertex).",
-  path: "Ex10_LinerPatternV3",
-  imgSrc: "images/Agent5.png"
-},
-{
-  name: "Agents V5",
-  desc: "Use of currentCircle and destinationCircle to attach circles together.",
-  path: "Ex10_LinerPatternV3",
-  imgSrc: "images/Agent6.png"
-},
-{
-  name: "Agents V6",
-  desc: "Use of currentCircle and destinationCircle to attach circles together continued",
-  path: "Ex10_LinerPatternV3",
-  imgSrc: "images/Agent7.png"
-},
-{
-  name: "Agents V7",
-  desc: "Intro to using agents & classes.",
-  path: "Ex10_LinerPatternV3",
-  imgSrc: "images/Agent8.png"
-},
-{
-  name: "Agents V8",
-  desc: "Intro to drawing circles and checking for overlaps.",
-  path: "Ex10_LinerPatternV3",
-  imgSrc: "images/Agent9.png"
-},
-{
-  name: "Agents V9",
-  desc: "Intro to circle growth.",
-  path: "Ex10_LinerPatternV3",
-  imgSrc: "images/Agent10.png"
-},
-{
-  name: "Agents V10",
-  desc: "Combining growth and checking for overlaps/empty space to create circle packing effect.",
-  path: "Ex10_LinerPatternV3",
-  imgSrc: "images/Agent11.png"
-},
+
+
+
 
 
 
@@ -230,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const wrapper = document.getElementById("wrapper")
   const row = document.createElement("div")
 
-  row.className = "row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-4 "
+  row.className = "row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-3"
   
   objects.forEach(obj => {
     const div = document.createElement("div")
@@ -251,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     div.className = 'col'
     card.className = 'card bg-dark'
-    img.className = 'card-img-top img-thumbnail'
+    img.className = 'card-img-top img-thumbnail height: 500px'
     cardBodyDiv.className = 'card-body dark'
     title.className = 'card-title dark'
     desc.className = 'card-text dark'
@@ -285,15 +169,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="/">Class Work</a>
+          <a class="nav-link" href="index.html">Class Work</a>
           <a class="nav-link" href="CA1.html">CA1</a>
-          <a class="nav-link" href="CA2.html">CA2</a>
+          <a class="nav-link active" aria-current="page" href="/">CA2</a>
           
-
         </div>
       </div>
     </div>
@@ -302,19 +183,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 <div class="jumbotron">
   <div class="container text-center">
-    <h1>Creative Coding Y4</h1>
-    <h5>Vivienne Mulvey N00171916</h5>
-    <h6>Invision Board - https://projects.invisionapp.com/boards/GF411FK894M/</h6>
-    <h4>A collection of p5.js sketches done in class over the course of my final year.</h4>
-   
+    <h1>CA2 - Generative Agency</h1>
+    <h4>Info on CA</h4>
 
   </div>
 </div>
-
 <div class="container container-fluid bg-3 py-5" id="wrapper">
 
 </div>
-
 <br />
 <br />
 <br />
