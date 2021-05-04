@@ -20,8 +20,8 @@ class Point {
     this.location = createVector(_x, _y);
     this.radius = _r;
     this.color = assignColor[int(random(0, assignColor.length))];
-    this.moveX = random(-0.05, 0.05);
-    this.moveY = random(-0.05, 0.05);
+    this.moveX = random(-0.1, 0.1);
+    this.moveY = random(-0.1, 0.1);
     this.velocity = createVector(this.moveX, this.moveY);
 
   }
